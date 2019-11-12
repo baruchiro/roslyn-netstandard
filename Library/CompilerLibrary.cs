@@ -12,20 +12,23 @@ namespace Library
     {
         public static void Compile()
         {
-            var testTree = CSharpSyntaxTree.ParseText(@"using System; 
-        namespace test{
+            var testTree = CSharpSyntaxTree.ParseText(@"
+using System;
+using ExternalLibrary;
 
-         public class Power
-         {
+namespace test{
 
-           public void power(int number)
-          { 
-            Console.WriteLine(number * number);
-          } 
+    public class Power
+    {
 
-         }
+        public void power(int number)
+        { 
+            new ExternalClass().Print(number * number);
+        } 
 
-        }");
+    }
+
+}");
 
             var options = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary, allowUnsafe: true);
 
@@ -34,6 +37,7 @@ namespace Library
             var references = new List<MetadataReference>
             {
                 MetadataReference.CreateFromFile(typeof(object).Assembly.Location),
+                MetadataReference.CreateFromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "ExternalLibrary.dll"))
             };
 
             if (AppContext.GetData("TRUSTED_PLATFORM_ASSEMBLIES") is string trustedAssemblies)

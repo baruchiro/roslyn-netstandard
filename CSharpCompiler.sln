@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreExe", "CoreExe\CoreExe.csproj", "{8D0F69D1-AB50-4C0A-8929-3A786B6D78ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalLibrary", "ExternalLibrary\ExternalLibrary.csproj", "{7B4171EA-C574-4D69-944D-C4EDDDFBD83E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8D0F69D1-AB50-4C0A-8929-3A786B6D78ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D0F69D1-AB50-4C0A-8929-3A786B6D78ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D0F69D1-AB50-4C0A-8929-3A786B6D78ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B4171EA-C574-4D69-944D-C4EDDDFBD83E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4171EA-C574-4D69-944D-C4EDDDFBD83E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4171EA-C574-4D69-944D-C4EDDDFBD83E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4171EA-C574-4D69-944D-C4EDDDFBD83E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
